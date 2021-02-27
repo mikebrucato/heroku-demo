@@ -18,14 +18,19 @@ app.use(routes);
 
 // Connect to the Mongo DB
 if (process.env.NODE_ENV === "production") {
-  mongoose.connect(process.env.MONGODB_URI, {
+  mongoose.connect(process.env.MONGODB_URI,  {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
     useFindAndModify: false
   });
 } else {
-  mongoose.connect("mongodb://localhost/reactreadinglist");
+  mongoose.connect("mongodb://localhost/reactreadinglist",  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false
+  });
 }
 //mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist");
 
