@@ -25,7 +25,7 @@ if (process.env.NODE_ENV === "production") {
     useFindAndModify: false
   });
 } else {
-  mongoose.connect("mongodb://localhost/reactreadinglist",  {
+  mongoose.connect("mongodb+srv://mikebrucato:Password123@cluster0.fqgcf.mongodb.net/reading-heroku?retryWrites=true&w=majority",  {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
